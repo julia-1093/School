@@ -53,7 +53,7 @@ class GeometryTests(unittest.TestCase):
 
     def test_catalogue_both_lessons_and_assets(self):
         self.page.goto(self.base)
-        expect(self.page.locator(".lesson-card")).to_have_count(2)
+        expect(self.page.locator(".lesson-card")).to_have_count(3)
         self.page.locator('.lesson-card[href="./geometry-10-line-plane/"]').click()
         expect(self.page).to_have_title("Параллельность прямой и плоскости — геометрия, 10 класс · По полочкам")
         expect(self.page.locator("#lesson-title")).to_contain_text("плоскость")

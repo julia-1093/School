@@ -1928,3 +1928,10 @@ input[type="range"] {
   width: 210px;
   max-width: 85%;
 }
+
+.lesson-card.algebra-card .lesson-card-art {
+  background: #dfe8ec;
+}
+.lesson-card.algebra-card .lesson-card-art > span:first-child {
+  font-size: 32px;
+}

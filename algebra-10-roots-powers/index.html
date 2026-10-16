@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#194d43" />
+    <meta
+      name="description"
+      content="Алгебра 10 класса: степенная функция, корни n-й степени и рациональные показатели. ОДЗ, иррациональные уравнения и неравенства с пошаговыми решениями. Базовый и повышенный уровни."
+    />
+    <title>
+      Корни, степени и иррациональные неравенства — алгебра, 10 класс · По
+      полочкам
+    </title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23194d43'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='sans-serif' fill='%23f5f4e8'%3E%E2%88%9A%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="./lesson.css" />
+    <script src="../assets/lesson-runner.js" defer></script>
+    <script src="./lesson.js" defer></script>
+  </head>
+  <body class="algebra-lesson">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../"
+          ><span class="brand-mark" aria-hidden="true">≡</span>По полочкам<span
+            class="brand-dot"
+            aria-hidden="true"
+            >.</span
+          ></a
+        ><a class="back-link" href="../">← Все уроки</a>
+      </div>
+    </header>
+    <main id="main" class="container lesson-main">
+      <section class="hero" aria-labelledby="lesson-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="subject-dot"></span>Алгебра и начала анализа · 10 класс
+          </div>
+          <h1 id="lesson-title">Корни<br /><em>и степени.</em></h1>
+          <p>
+            От свойств степенной функции — к уравнениям и неравенствам с
+            неизвестным под корнем.
+          </p>
+          <div class="hero-meta">
+            <span>~ 35 минут</span
+            ><span class="small-dot" aria-hidden="true"></span
+            ><span>Базовый маршрут + блок повышенной сложности</span>
+          </div>
+        </div>
+        <div class="formula-poster algebra-poster">
+          <div class="poster-top">
+            <span>Иррациональные уравнения и неравенства</span
+            ><span aria-hidden="true">03 / √</span>
+          </div>
+          <div class="poster-equation">
+            <math
+              xmlns="http://www.w3.org/1998/Math/MathML"
+              aria-label="Корень из x плюс два равен x"
+              ><msqrt
+                ><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow></msqrt
+              ><mo>=</mo><mi>x</mi></math
+            >
+          </div>
+          <div class="poster-rule"></div>
+          <div class="poster-bottom">
+            <span>ОДЗ → знак → квадрат → проверка</span
+            ><span aria-hidden="true">x = 2</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="lesson-navigation">
+        <div class="tabs" role="tablist" aria-label="Этапы урока">
+          <button
+            id="tab-learn"
+            class="tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-learn"
+            tabindex="0"
+            data-tab="learn"
+          >
+            <span>01</span> Разобраться</button
+          ><button
+            id="tab-practice"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-practice"
+            tabindex="-1"
+            data-tab="practice"
+          >
+            <span>02</span> Практика</button
+          ><button
+            id="tab-check"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-check"
+            tabindex="-1"
+            data-tab="check"
+          >
+            <span>03</span> Проверить себя
+          </button>
+        </div>
+        <div class="overall-progress">
+          <span id="overall-label">Разобрано 0 из 16</span>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Разобранные задания практики"
+            aria-valuemin="0"
+            aria-valuemax="16"
+            aria-valuenow="0"
+          >
+            <span id="overall-fill"></span>
+          </div>
+        </div>
+      </div>
+      <p id="storage-notice" class="storage-notice" role="status" hidden>
+        Сохранение недоступно. Урок работает, но прогресс исчезнет после
+        закрытия страницы.
+      </p>
+      <noscript
+        ><div class="callout">
+          Теорию можно прочитать без JavaScript. Для графиков, переключения
+          разделов и проверки ответов включи JavaScript.
+        </div></noscript
+      >
+
+      <section
+        id="panel-learn"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-learn"
+        tabindex="0"
+      >
+        <div class="route-note">
+          <span class="tag">Базовый маршрут</span>
+          <p>
+            Сначала свойства корней и степеней, затем уравнения и неравенства.
+            Отдельный блок со звёздочкой можно пройти после основных заданий.
+          </p>
+        </div>
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <div class="eyebrow">Что означает знак корня</div>
+            <h2>Корень — число, а не два ответа сразу.</h2>
+          </div>
+        </div>
+        <div class="algebra-grid">
+          <article class="paper algebra-card-body">
+            <span class="mini-label">Корень n-й степени</span>
+            <h3>Ищем b, для которого b<sup>n</sup> = a.</h3>
+            <p>
+              Показатель n — целое число, n ≥ 2. Но чётность n меняет область
+              определения и знак результата.
+            </p>
+            <div class="root-parity">
+              <div>
+                <h4>n чётное</h4>
+                <p>
+                  Нужны a ≥ 0 и b ≥ 0. Арифметический корень всегда
+                  неотрицателен.
+                </p>
+                <p class="formula-line">√16 = 4; ∜16 = 2</p>
+              </div>
+              <div>
+                <h4>n нечётное</h4>
+                <p>
+                  a может быть любым действительным числом. Знак корня совпадает
+                  со знаком a.
+                </p>
+                <p class="formula-line">∛(−27) = −3</p>
+              </div>
+            </div>
+            <div class="callout subtle">
+              <strong>Не путай корень и уравнение.</strong>Уравнение b⁴ = 16
+              имеет решения −2 и 2. Но запись ∜16 обозначает только число 2.
+            </div>
+          </article>
+          <article class="algebra-demo">
+            <div class="card-kicker">
+              <span class="mini-label">Исследуй корень</span
+              ><span class="model-tag">В действительных числах</span>
+            </div>
+            <div class="root-inputs">
+              <label
+                >Показатель n<select id="root-index">
+                  <option value="2">2 · квадратный</option>
+                  <option value="3">3 · кубический</option>
+                  <option value="4">4 · четвёртой степени</option>
+                  <option value="5">5 · пятой степени</option>
+                  <option value="6">6 · шестой степени</option>
+                </select></label
+              ><label
+                >Подкоренное число a<input
+                  id="radicand"
+                  type="number"
+                  value="16"
+                  min="-1000000"
+                  max="1000000"
+                  step="any"
+                  inputmode="decimal"
+              /></label>
+            </div>
+            <div
+              id="root-result"
+              class="calculation-result"
+              aria-live="polite"
+              aria-atomic="true"
+            ></div>
+            <p class="footnote">
+              Попробуй a = −27 при n = 3, а затем при n = 2. Знак ≈ появляется,
+              если значение округлено до трёх знаков.
+            </p>
+          </article>
+        </div>
+        <div class="pitfall-row">
+          <article>
+            <h3>√(a²) = |a|</h3>
+            <p>
+              При a = −5 получаем √25 = 5. Снять квадрат и корень без модуля
+              здесь нельзя. Для нечётного n верно ⁿ√(aⁿ) = a.
+            </p>
+          </article>
+          <article>
+            <h3>Корень суммы не разбивается</h3>
+            <p>
+              √(9 + 16) = 5, а √9 + √16 = 7. Правило √(ab) = √a · √b для a, b ≥
+              0 относится к произведению, не к сумме.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">02</span>
+          <div>
+            <div class="eyebrow">Составим карту функций</div>
+            <h2>У похожей записи бывают разные ограничения.</h2>
+          </div>
+        </div>
+        <div class="algebra-grid">
+          <article class="paper algebra-card-body">
+            <span class="mini-label">Степенная функция</span>
+            <h3>y = x<sup>p</sup>, где p — фиксированное число.</h3>
+            <p>
+              От показателя зависят область определения, знак и монотонность.
+              Сравни четыре характерных примера.
+            </p>
+            <div
+              class="function-buttons"
+              role="group"
+              aria-label="Выбор графика"
+            >
+              <button type="button" data-function="square" aria-pressed="true">
+                y = x²</button
+              ><button type="button" data-function="cube" aria-pressed="false">
+                y = x³</button
+              ><button type="button" data-function="sqrt" aria-pressed="false">
+                y = √x</button
+              ><button
+                type="button"
+                data-function="inverse"
+                aria-pressed="false"
+              >
+                y = 1/x
+              </button>
+            </div>
+            <div
+              id="function-facts"
+              class="function-facts"
+              aria-live="polite"
+              aria-atomic="true"
+            ></div>
+            <label class="range-label" for="graph-x"
+              >Выбери аргумент x
+              <output id="graph-x-value" for="graph-x">1</output></label
+            ><input
+              id="graph-x"
+              type="range"
+              min="-2"
+              max="2"
+              value="1"
+              step="0.25"
+            />
+            <p id="graph-point" class="graph-point" aria-live="polite"></p>
+          </article>
+          <article class="algebra-demo graph-card">
+            <div class="card-kicker">
+              <span class="mini-label">График и область определения</span
+              ><span id="graph-caption" class="model-tag">y = x²</span>
+            </div>
+            <svg
+              id="power-graph"
+              viewBox="0 0 400 320"
+              role="img"
+              aria-labelledby="power-graph-title power-graph-desc"
+            >
+              <title id="power-graph-title">График y = x²</title>
+              <desc id="power-graph-desc">
+                Парабола. Область определения — все действительные числа,
+                значения неотрицательны.
+              </desc>
+              <defs>
+                <clipPath id="plot-clip">
+                  <rect x="40" y="20" width="320" height="280"></rect>
+                </clipPath>
+              </defs>
+              <g id="graph-grid"></g>
+              <g id="graph-curves" clip-path="url(#plot-clip)"></g>
+              <g id="graph-dot" clip-path="url(#plot-clip)"></g>
+            </svg>
+            <p class="footnote">
+              Одна клетка — единица. У y = 1/x две отдельные ветви: x = 0 не
+              входит в область определения.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">03</span>
+          <div>
+            <div class="eyebrow">Дробь в показателе степени</div>
+            <h2>Знаменатель — корень. Числитель — степень.</h2>
+          </div>
+        </div>
+        <div class="paper power-rules">
+          <div>
+            <span class="mini-label">Для a &gt; 0</span>
+            <div class="formula-line">
+              <math
+                xmlns="http://www.w3.org/1998/Math/MathML"
+                aria-label="a в степени m делить на n равно корню n-й степени из a, возведённому в степень m"
+                ><msup
+                  ><mi>a</mi><mfrac><mi>m</mi><mi>n</mi></mfrac></msup
+                ><mo>=</mo
+                ><msup
+                  ><mrow
+                    ><mo>(</mo><mroot><mi>a</mi><mi>n</mi></mroot
+                    ><mo>)</mo></mrow
+                  ><mi>m</mi></msup
+                ></math
+              >
+            </div>
+            <p>
+              m — целое, n — натуральное, n ≥ 2. Здесь свойства рациональных
+              степеней формулируем для положительного основания.
+            </p>
+          </div>
+          <div>
+            <h3>Два примера</h3>
+            <p class="formula-line">27<sup>2/3</sup> = (∛27)² = 9</p>
+            <p class="formula-line">16<sup>−1/2</sup> = 1 / √16 = 1/4</p>
+            <p>
+              Отрицательный показатель означает обратное число. Это не минус
+              перед результатом.
+            </p>
+          </div>
+        </div>
+        <div class="paper law-strip">
+          <span>a<sup>r</sup> · a<sup>s</sup> = a<sup>r+s</sup></span
+          ><span>a<sup>r</sup> / a<sup>s</sup> = a<sup>r−s</sup></span
+          ><span>(a<sup>r</sup>)<sup>s</sup> = a<sup>rs</sup></span>
+        </div>
+        <p class="section-footnote">
+          В этих правилах a &gt; 0. Нулевое основание допустимо при
+          положительном показателе: 0<sup>r</sup> = 0 для r &gt; 0. Записи 0⁰ и
+          отрицательные степени нуля здесь не определены. Корни нечётной степени
+          из отрицательных чисел, например ∛(−8), рассматриваем по определению
+          корня.
+        </p>
+
+        <div class="section-heading spaced">
+          <span class="section-number">04</span>
+          <div>
+            <div class="eyebrow">Иррациональное уравнение</div>
+            <h2>После возведения в квадрат нужен контроль.</h2>
+          </div>
+        </div>
+        <div class="algebra-grid">
+          <article class="equation-intro">
+            <span class="mini-label">Базовый алгоритм</span>
+            <h3>√f(x) = g(x)</h3>
+            <ol>
+              <li>Запиши ОДЗ: f(x) ≥ 0.</li>
+              <li>Учти знак правой части: g(x) ≥ 0.</li>
+              <li>Возведи обе части в квадрат.</li>
+              <li>
+                Отбери решения по условиям и проверь их в исходном уравнении.
+              </li>
+            </ol>
+            <div class="formula-line">
+              √f(x) = g(x)<br />⇔ f(x) = g²(x) и g(x) ≥ 0
+            </div>
+            <p class="footnote">
+              В этой равносильной системе f(x) ≥ 0 уже следует из f(x) = g²(x).
+              Отдельная запись ОДЗ помогает не потерять смысл исходного
+              выражения.
+            </p>
+            <div class="odd-root-note">
+              <strong>Нечётный корень работает иначе.</strong>
+              <p>
+                ∛(2x − 1) = 3 ⇔ 2x − 1 = 27 ⇔ x = 14. Кубическая функция строго
+                возрастает на всей ℝ: здесь не требуется условие «правая часть ≥
+                0».
+              </p>
+            </div>
+          </article>
+          <article class="paper algebra-card-body equation-example">
+            <div class="card-kicker">
+              <span class="mini-label">Разбор по шагам</span
+              ><span id="equation-counter" class="model-tag">Шаг 1 / 5</span>
+            </div>
+            <div class="example-formula">
+              <math
+                xmlns="http://www.w3.org/1998/Math/MathML"
+                aria-label="Корень из x плюс два равен x"
+                ><msqrt
+                  ><mrow><mi>x</mi><mo>+</mo><mn>2</mn></mrow></msqrt
+                ><mo>=</mo><mi>x</mi></math
+              >
+            </div>
+            <ol id="equation-steps" class="solution-steps"></ol>
+            <div class="solution-actions">
+              <button
+                id="equation-prev"
+                type="button"
+                class="button button-light"
+                disabled
+              >
+                ← Назад</button
+              ><button
+                id="equation-next"
+                type="button"
+                class="button button-primary"
+              >
+                Следующий шаг →
+              </button>
+            </div>
+            <div id="candidate-check" class="candidate-check" hidden>
+              <h4>Подставь кандидата в исходное уравнение</h4>
+              <div class="candidate-buttons">
+                <button
+                  type="button"
+                  class="button button-light"
+                  data-candidate="-1"
+                >
+                  x = −1</button
+                ><button
+                  type="button"
+                  class="button button-light"
+                  data-candidate="2"
+                >
+                  x = 2
+                </button>
+              </div>
+              <p id="candidate-result" role="status">
+                Выбери одно из значений.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">05</span>
+          <div>
+            <div class="eyebrow">Иррациональные неравенства</div>
+            <h2>Перед квадратом посмотри на знак справа.</h2>
+          </div>
+        </div>
+        <p class="section-intro">
+          Корень квадратный неотрицателен. Поэтому для знака «меньше» правая
+          часть должна быть положительной, а для «больше» отрицательная правая
+          часть даёт целую ветвь решений.
+        </p>
+        <div
+          class="comparison-buttons"
+          role="group"
+          aria-label="Знак неравенства"
+        >
+          <button type="button" data-comparison="lt" aria-pressed="true">
+            √f &lt; g</button
+          ><button type="button" data-comparison="le" aria-pressed="false">
+            √f ≤ g</button
+          ><button type="button" data-comparison="gt" aria-pressed="false">
+            √f &gt; g</button
+          ><button type="button" data-comparison="ge" aria-pressed="false">
+            √f ≥ g
+          </button>
+        </div>
+        <div class="algebra-grid">
+          <article class="paper algebra-card-body">
+            <span class="mini-label">Равносильные условия</span>
+            <div
+              id="inequality-rule"
+              class="inequality-rule"
+              aria-live="polite"
+              aria-atomic="true"
+            ></div>
+            <p class="card-note">
+              Здесь f и g обозначают значения выражений при одном и том же x.
+              Если есть знаменатели, их ограничения тоже включаются в ОДЗ.
+            </p>
+            <div class="callout subtle">
+              <strong>Почему нельзя просто возвести в квадрат?</strong>Например,
+              √1 &gt; −1 — верное неравенство. После бездумного возведения в
+              квадрат получилось бы 1 &gt; 1, и решение потерялось бы.
+            </div>
+          </article>
+          <article class="algebra-demo">
+            <div class="card-kicker">
+              <span class="mini-label">Один пример — четыре ответа</span
+              ><span class="model-tag">Следи за скобками</span>
+            </div>
+            <div id="inequality-example" class="example-formula"></div>
+            <ol
+              id="inequality-steps"
+              class="inequality-steps"
+              aria-live="polite"
+              aria-atomic="true"
+            ></ol>
+            <div id="inequality-answer" class="interval-answer"></div>
+            <svg
+              id="interval-model"
+              viewBox="0 0 400 110"
+              role="img"
+              aria-labelledby="interval-title"
+            >
+              <title id="interval-title">Решение неравенства</title>
+              <g id="interval-drawing"></g>
+            </svg>
+            <p class="footnote">
+              Закрашенная точка входит в ответ, пустая — не входит.
+              Бесконечность всегда записывают с круглой скобкой.
+            </p>
+          </article>
+        </div>
+        <div class="remember-strip">
+          <span class="remember-symbol" aria-hidden="true">!</span>
+          <div>
+            <h3>ОДЗ, знак справа, квадрат, отбор.</h3>
+            <p>
+              Для строгого знака «&lt;» условие g &gt; 0 строгое. Для «≤»
+              допускается g = 0. В неравенствах «&gt;» и «≥» сначала разбери
+              случай, когда правая часть отрицательна.
+            </p>
+          </div>
+        </div>
+
+        <details id="advanced-block" class="paper advanced-block">
+          <summary>
+            <span class="tag">Повышенный уровень ★</span
+            ><span>Два разбора и задача с ветвлением</span>
+          </summary>
+          <p class="section-intro">
+            Это отдельный дополнительный маршрут. Его задания не входят в
+            счётчик базовой практики.
+          </p>
+          <div class="algebra-grid">
+            <article>
+              <h3>Два корня в одном уравнении</h3>
+              <p class="formula-line">√(x + 1) + √(x − 2) = 3</p>
+              <ol class="advanced-steps">
+                <li>ОДЗ: x ≥ 2.</li>
+                <li>Возводим в квадрат: 2x − 1 + 2√((x + 1)(x − 2)) = 9.</li>
+                <li>
+                  Изолируем корень: √((x + 1)(x − 2)) = 5 − x. Нужно x ≤ 5.
+                </li>
+                <li>
+                  На промежутке [2; 5] снова возводим в квадрат: x² − x − 2 = (5
+                  − x)².
+                </li>
+                <li>
+                  Получаем 9x = 27, x = 3. Проверка: √4 + √1 = 3. Ответ: {3}.
+                </li>
+              </ol>
+            </article>
+            <article>
+              <h3>ОДЗ с разрывом</h3>
+              <p class="formula-line">√(x² − 5x + 6) ≤ x − 1</p>
+              <ol class="advanced-steps">
+                <li>ОДЗ: (x − 2)(x − 3) ≥ 0, значит x ≤ 2 или x ≥ 3.</li>
+                <li>Правая часть неотрицательна: x ≥ 1.</li>
+                <li>После квадрата: x² − 5x + 6 ≤ (x − 1)².</li>
+                <li>Отсюда x ≥ 5/3.</li>
+                <li>
+                  Пересекаем все условия: [5/3; 2] ∪ [3; +∞). Промежуток (2; 3)
+                  запрещён ОДЗ.
+                </li>
+              </ol>
+            </article>
+          </div>
+          <div class="advanced-challenge">
+            <span class="mini-label">Попробуй самостоятельно</span>
+            <h3>Реши √(x² − 4) &gt; x − 1.</h3>
+            <p>
+              Сначала найди ОДЗ, затем отдельно рассмотри отрицательную и
+              неотрицательную правую часть.
+            </p>
+            <div
+              class="challenge-options"
+              role="group"
+              aria-label="Ответ к задаче повышенной сложности"
+            >
+              <button type="button" data-challenge="0">(5/2; +∞)</button
+              ><button type="button" data-challenge="1">
+                (−∞; −2] ∪ (5/2; +∞)</button
+              ><button type="button" data-challenge="2">
+                (−∞; −2) ∪ [5/2; +∞)
+              </button>
+            </div>
+            <div
+              id="challenge-feedback"
+              class="challenge-feedback"
+              role="status"
+              hidden
+            ></div>
+          </div>
+        </details>
+        <div class="lesson-next">
+          <div>
+            <span class="mini-label">Теперь твоя очередь</span>
+            <h3>16 шагов от свойств к решениям.</h3>
+          </div>
+          <button
+            type="button"
+            class="button button-primary"
+            data-go="practice"
+          >
+            Перейти к практике →
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-practice"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-practice"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Без спешки и без оценок</div>
+            <h2>Попробуй. Разберись. Запомни.</h2>
+            <p>
+              Выбери ответ — и сразу прочитай объяснение. Можно вернуться к
+              любому заданию.
+            </p>
+          </div>
+          <div class="practice-stat">
+            <strong id="first-try-count">0</strong
+            ><span>верно с первого раза</span>
+          </div>
+        </div>
+        <div class="practice-layout">
+          <aside class="paper practice-sidebar" aria-label="Задания">
+            <div class="card-kicker">
+              <h3>Твой маршрут</h3>
+              <span>16 шагов</span>
+            </div>
+            <div id="question-dots" class="question-dots"></div>
+            <div class="status-key">
+              <span
+                ><i class="status-marker done" aria-hidden="true"></i
+                >Верно</span
+              ><span
+                ><i class="status-marker review" aria-hidden="true"></i>Нужно
+                повторить</span
+              >
+            </div>
+            <p class="footnote">
+              Разобранное задание учитывается в прогрессе. Ответ после подсказки
+              не считается верным с первой попытки.
+            </p>
+            <button class="text-button" type="button" data-go="learn">
+              ↖ Вернуться к теории
+            </button>
+          </aside>
+          <article
+            id="practice-card"
+            class="paper practice-card"
+            aria-labelledby="question-title"
+          >
+            <div id="practice-content"></div>
+          </article>
+        </div>
+        <div id="practice-complete" class="completion-banner" hidden>
+          <div>
+            <span class="mini-label">Весь маршрут разобран</span>
+            <h3>Хорошая работа. Осталась самопроверка.</h3>
+            <p id="practice-complete-text"></p>
+          </div>
+          <button type="button" class="button button-primary" data-go="check">
+            Проверить себя →
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-check"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-check"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Последний шаг</div>
+            <h2>Собери всё вместе.</h2>
+            <p>
+              6 вопросов без подсказок. После проверки появятся ответы и
+              объяснения. Ограничения по времени нет.
+            </p>
+          </div>
+          <span class="tag">Корни · ОДЗ · уравнения · неравенства</span>
+        </div>
+        <div id="exam-result" class="exam-result" role="status" hidden></div>
+        <form id="exam-form" novalidate>
+          <div id="exam-questions" class="exam-questions"></div>
+          <p id="exam-error" class="form-error" role="alert" hidden></p>
+          <div class="exam-actions">
+            <p id="exam-filled" class="muted">Выбрано ответов: 0 из 6</p>
+            <button
+              id="exam-submit"
+              type="submit"
+              class="button button-primary"
+            >
+              Проверить ответы →</button
+            ><button
+              id="exam-restart"
+              type="button"
+              class="button button-light"
+              hidden
+            >
+              Пройти ещё раз ↻
+            </button>
+          </div>
+        </form>
+        <div class="paper pocket-card">
+          <div>
+            <span class="mini-label">Памятка</span>
+            <h3>Не потеряй условия, пока меняешь выражение.</h3>
+          </div>
+          <ol>
+            <li>
+              Для чётного n: ⁿ√a определён при a ≥ 0 и неотрицателен. Для
+              нечётного n корень определён при любом действительном a.
+            </li>
+            <li>
+              √(a²) = |a|. При a &gt; 0: a<sup>m/n</sup> = (ⁿ√a)<sup>m</sup>;
+              a<sup>−r</sup> = 1/a<sup>r</sup>.
+            </li>
+            <li>
+              Уравнение √f = g равносильно условиям f = g² и g ≥ 0. Проверяй
+              кандидатов в исходной записи.
+            </li>
+            <li>
+              √f &lt; g ⇔ f ≥ 0, g &gt; 0, f &lt; g². Для «≤» оба последних
+              знака нестрогие.
+            </li>
+            <li>
+              Для √f &gt; g сначала учти ветвь f ≥ 0, g &lt; 0. При g ≥ 0
+              сравнивай f и g². Для «≥» неположительная правая часть подходит
+              автоматически на ОДЗ.
+            </li>
+            <li>
+              Ответ неравенства — пересечение условий или объединение подходящих
+              ветвей. Проверь каждую границу и вид скобок.
+            </li>
+          </ol>
+          <button id="print-summary" type="button" class="text-button">
+            Распечатать памятку ↗
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="container site-footer">
+      <div>
+        <span>По полочкам · алгебра, 10 класс</span>
+        <p>Прогресс сохраняется в этом браузере.</p>
+      </div>
+      <button id="reset-progress" type="button" class="text-button">
+        Сбросить прогресс урока
+      </button>
+    </footer>
+  </body>
+</html>
