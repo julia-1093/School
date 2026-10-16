@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#194d43" />
+    <meta
+      name="description"
+      content="Геометрия, 10 класс: взаимное расположение прямой и плоскости, признак параллельности, свойство линии пересечения и сечение куба. Схемы и задания с объяснениями."
+    />
+    <title>
+      Параллельность прямой и плоскости — геометрия, 10 класс · По полочкам
+    </title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23194d43'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='sans-serif' fill='%23f5f4e8'%3E%E2%88%A5%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="./lesson.css" />
+    <script src="../assets/lesson-runner.js" defer></script>
+    <script src="./lesson.js" defer></script>
+  </head>
+  <body class="geometry-lesson">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../"
+          ><span class="brand-mark" aria-hidden="true">≡</span>По полочкам<span
+            class="brand-dot"
+            aria-hidden="true"
+            >.</span
+          ></a
+        ><a class="back-link" href="../">← Все уроки</a>
+      </div>
+    </header>
+    <main id="main" class="container lesson-main">
+      <section class="hero" aria-labelledby="lesson-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="subject-dot"></span>Геометрия · 10 класс · урок 02
+          </div>
+          <h1 id="lesson-title">Прямая<br /><em>и плоскость.</em></h1>
+          <p>
+            Когда у них нет общих точек — и как превратить это условие в
+            доказательство.
+          </p>
+          <div class="hero-meta">
+            <span>~ 25 минут</span
+            ><span class="small-dot" aria-hidden="true"></span
+            ><span>Схемы · доказательства · сечение куба</span>
+          </div>
+        </div>
+        <div class="formula-poster geometry-poster">
+          <div class="poster-top">
+            <span>Стереометрия</span><span aria-hidden="true">02 / ∥</span>
+          </div>
+          <svg
+            viewBox="0 0 440 210"
+            role="img"
+            aria-label="Прямая a параллельна прямой b в плоскости альфа"
+          >
+            <path
+              d="M35 164 305 164 400 104 130 104Z"
+              fill="#c3d3b9"
+              stroke="#759774"
+            />
+            <path
+              d="M65 67 385 67"
+              stroke="#a55331"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <path
+              d="M55 136 377 136"
+              stroke="#194d43"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <text
+              x="390"
+              y="64"
+              font-size="23"
+              font-family="Georgia,serif"
+              fill="#8d482c"
+            >
+              a
+            </text>
+            <text
+              x="386"
+              y="141"
+              font-size="23"
+              font-family="Georgia,serif"
+              fill="#194d43"
+            >
+              b
+            </text>
+            <text
+              x="95"
+              y="155"
+              font-size="22"
+              font-family="Georgia,serif"
+              fill="#194d43"
+            >
+              α
+            </text>
+          </svg>
+          <div class="poster-rule"></div>
+          <div class="poster-bottom">
+            <span
+              >Найди прямую в плоскости.<br />Проверь все условия
+              признака.</span
+            ><strong>a ∥ α</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="lesson-navigation">
+        <div class="tabs" role="tablist" aria-label="Этапы урока">
+          <button
+            id="tab-learn"
+            class="tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-learn"
+            tabindex="0"
+            data-tab="learn"
+          >
+            <span>01</span> Разобраться</button
+          ><button
+            id="tab-practice"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-practice"
+            tabindex="-1"
+            data-tab="practice"
+          >
+            <span>02</span> Практика</button
+          ><button
+            id="tab-check"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-check"
+            tabindex="-1"
+            data-tab="check"
+          >
+            <span>03</span> Проверить себя
+          </button>
+        </div>
+        <div class="overall-progress">
+          <span id="overall-label">Разобрано 0 из 12</span>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Разобранные задания практики"
+            aria-valuemin="0"
+            aria-valuemax="12"
+            aria-valuenow="0"
+          >
+            <span id="overall-fill"></span>
+          </div>
+        </div>
+      </div>
+      <p id="storage-notice" class="storage-notice" role="status" hidden>
+        Сохранение недоступно. Урок работает, но прогресс исчезнет после
+        закрытия страницы.
+      </p>
+      <noscript
+        ><div class="callout">
+          Теорию можно прочитать без JavaScript. Для схем, переключения разделов
+          и проверки ответов включи JavaScript.
+        </div></noscript
+      >
+
+      <section
+        id="panel-learn"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-learn"
+        tabindex="0"
+      >
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <div class="eyebrow">Начнём с общих точек</div>
+            <h2>Одна прямая. Три разных случая.</h2>
+          </div>
+        </div>
+        <div class="case-layout">
+          <article class="paper case-details">
+            <span class="mini-label">Наглядная модель</span>
+            <h3>Что общего у прямой a и плоскости α?</h3>
+            <p class="card-note">
+              Выбери случай и сравни рисунок с точным определением.
+            </p>
+            <div
+              class="case-choices"
+              role="group"
+              aria-label="Взаимное расположение прямой и плоскости"
+            >
+              <button
+                class="case-choice"
+                type="button"
+                data-case="inside"
+                aria-pressed="false"
+              >
+                <span>∞</span
+                ><span
+                  ><strong>Прямая лежит в плоскости</strong
+                  ><small>Все её точки принадлежат плоскости</small></span
+                >
+              </button>
+              <button
+                class="case-choice"
+                type="button"
+                data-case="crossing"
+                aria-pressed="false"
+              >
+                <span>1</span
+                ><span
+                  ><strong>Пересекает плоскость</strong
+                  ><small>Ровно одна общая точка</small></span
+                >
+              </button>
+              <button
+                class="case-choice"
+                type="button"
+                data-case="parallel"
+                aria-pressed="true"
+              >
+                <span>0</span
+                ><span
+                  ><strong>Параллельна плоскости</strong
+                  ><small>Нет ни одной общей точки</small></span
+                >
+              </button>
+            </div>
+            <div
+              id="case-result"
+              class="case-result"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              <h4>a ∥ α</h4>
+              <p>
+                У прямой и плоскости нет общих точек. Именно это и означает
+                параллельность.
+              </p>
+            </div>
+          </article>
+          <article class="diagram-card">
+            <div class="card-kicker">
+              <span class="mini-label">Прямая и плоскость</span
+              ><span class="model-tag" id="case-count">0 общих точек</span>
+            </div>
+            <svg
+              id="case-model"
+              viewBox="0 0 520 350"
+              role="img"
+              aria-labelledby="case-model-title case-model-desc"
+            >
+              <title id="case-model-title">Прямая параллельна плоскости</title>
+              <desc id="case-model-desc">
+                Прямая a проходит вне плоскости α и не имеет с ней общих точек.
+              </desc>
+              <g id="case-drawing"></g>
+            </svg>
+            <p class="footnote">
+              Параллелограмм изображает только часть бесконечной плоскости.
+              Выход за его границу ещё не означает выход из плоскости. Пунктир —
+              условно скрытая часть линии.
+            </p>
+          </article>
+        </div>
+        <div class="paper notation-card">
+          <div>
+            <strong>a ⊂ α</strong>
+            <p>
+              Вся прямая a лежит в плоскости α. Если две различные точки прямой
+              лежат в плоскости, то и вся прямая лежит в ней.
+            </p>
+          </div>
+          <div>
+            <strong>a ∩ α = {M}</strong>
+            <p>
+              Прямая пересекает плоскость в одной точке M. Здесь фигурные скобки
+              обозначают множество из одной точки.
+            </p>
+          </div>
+          <div>
+            <strong>a ∥ α</strong>
+            <p>
+              Прямая параллельна плоскости: a ∩ α = ∅. Знак ∅ означает пустое
+              множество.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">02</span>
+          <div>
+            <div class="eyebrow">Как доказать параллельность</div>
+            <h2>Найди прямую-помощника в плоскости.</h2>
+          </div>
+        </div>
+        <div class="theorem-layout">
+          <article class="theorem-card">
+            <span class="mini-label">Признак параллельности</span>
+            <h3>Одна параллельная прямая — достаточное основание.</h3>
+            <p>
+              Если прямая a, <strong>не лежащая</strong> в плоскости α,
+              параллельна некоторой прямой b, лежащей в α, то a параллельна
+              плоскости α.
+            </p>
+            <ol class="condition-list">
+              <li><span>1</span>a не лежит в α: a ⊄ α.</li>
+              <li><span>2</span>Прямая b целиком лежит в α: b ⊂ α.</li>
+              <li><span>3</span>Прямые a и b параллельны: a ∥ b.</li>
+            </ol>
+            <div class="math-line">a ⊄ α, b ⊂ α, a ∥ b<br />⇒ a ∥ α</div>
+          </article>
+          <article class="diagram-card">
+            <div class="card-kicker">
+              <span class="mini-label">b — прямая-помощник</span
+              ><span class="model-tag">a ∥ b</span>
+            </div>
+            <svg
+              id="criterion-model"
+              viewBox="0 0 520 350"
+              role="img"
+              aria-labelledby="criterion-title criterion-desc"
+            >
+              <title id="criterion-title">
+                Признак параллельности прямой и плоскости
+              </title>
+              <desc id="criterion-desc">
+                Прямая b лежит в α, прямая a не лежит в α и параллельна b.
+                Дополнительная плоскость β может быть показана для
+                доказательства.
+              </desc>
+              <g id="criterion-drawing"></g></svg
+            ><label class="checkbox-label proof-toggle"
+              ><input id="show-proof-plane" type="checkbox" />Показать
+              вспомогательную плоскость β</label
+            >
+            <p class="footnote">
+              Плоскость β проходит через параллельные прямые a и b. Плоскости α
+              и β пересекаются по прямой b.
+            </p>
+          </article>
+        </div>
+        <details class="paper proof-card property-proof">
+          <summary>Почему признак работает? Короткое доказательство</summary>
+          <ol class="explanation-steps">
+            <li>
+              <span>1</span>
+              <div>
+                <h4>Проведём плоскость β через a и b</h4>
+                <p>
+                  Параллельные прямые лежат в одной плоскости. β отличается от
+                  α, потому что a не лежит в α. Обе плоскости содержат b, значит
+                  α ∩ β = b.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <h4>Предположим, что a пересекает α в точке M</h4>
+                <p>
+                  Точка M лежит и в β, так как M принадлежит a, и в α.
+                  Следовательно, M лежит на их линии пересечения b.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <h4>Получили противоречие</h4>
+                <p>
+                  Тогда a и b имеют общую точку M, хотя a ∥ b. Значит a не
+                  пересекает α, то есть a ∥ α.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </details>
+
+        <div class="pitfall-grid">
+          <article class="pitfall-card">
+            <h3>Не убирай условие a ⊄ α</h3>
+            <p>
+              В одной плоскости можно провести две параллельные прямые. Тогда a
+              ∥ b и b ⊂ α, но a тоже лежит в α. Называть её параллельной этой
+              плоскости нельзя.
+            </p>
+          </article>
+          <article class="pitfall-card">
+            <h3>«Параллельна плоскости» ≠ «параллельна всем её прямым»</h3>
+            <p>
+              Если a ∥ α, то в α есть прямые, параллельные a. Но другие прямые
+              этой плоскости могут быть скрещивающимися с a: они не пересекаются
+              и не лежат с a в одной плоскости.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">03</span>
+          <div>
+            <div class="eyebrow">Свойство для задач на сечения</div>
+            <h2>Параллельность переходит к линии пересечения.</h2>
+          </div>
+        </div>
+        <div class="theorem-layout">
+          <article class="theorem-card">
+            <span class="mini-label">Свойство</span>
+            <h3>Плоскость через a оставляет параллельный след.</h3>
+            <p>
+              Если a ∥ α, плоскость β проходит через a и пересекает α по прямой
+              b, то <strong>b ∥ a</strong>.
+            </p>
+            <div class="math-line">a ∥ α, a ⊂ β, α ∩ β = b<br />⇒ b ∥ a</div>
+            <ol class="condition-list">
+              <li><span>α</span>Плоскость, которой параллельна a.</li>
+              <li><span>β</span>Плоскость, проходящая через a.</li>
+              <li><span>b</span>Линия пересечения этих плоскостей.</li>
+            </ol>
+          </article>
+          <article class="diagram-card">
+            <div class="card-kicker">
+              <span class="mini-label">β проходит через a</span
+              ><span class="model-tag">b ∥ a</span>
+            </div>
+            <svg
+              viewBox="0 0 520 350"
+              role="img"
+              aria-labelledby="property-title property-desc"
+            >
+              <title id="property-title">
+                Линия пересечения плоскостей параллельна прямой a
+              </title>
+              <desc id="property-desc">
+                Плоскость β содержит a и пересекает α по b. Прямые a и b лежат в
+                β и параллельны.
+              </desc>
+              <g id="property-drawing"></g>
+            </svg>
+            <p class="diagram-caption">
+              Зелёная плоскость — α, светлая вертикальная — β. На рисунке b = α
+              ∩ β. Условие существования линии пересечения здесь обязательно.
+            </p>
+          </article>
+        </div>
+        <article class="paper property-proof">
+          <h3>Два шага доказательства</h3>
+          <p>
+            <strong>Прямые a и b лежат в одной плоскости β.</strong> Они не
+            могут пересекаться: общая точка лежала бы и на a, и в α, что
+            противоречит a ∥ α. Две прямые в одной плоскости без общих точек
+            параллельны.
+          </p>
+        </article>
+
+        <div class="section-heading spaced">
+          <span class="section-number">04</span>
+          <div>
+            <div class="eyebrow">Применим свойство</div>
+            <h2>Построим сечение куба по шагам.</h2>
+          </div>
+        </div>
+        <div class="cut-layout">
+          <article class="diagram-card">
+            <div class="card-kicker">
+              <span class="mini-label">Куб ABCDA₁B₁C₁D₁</span
+              ><span class="model-tag" id="cut-counter">Шаг 1 / 4</span>
+            </div>
+            <svg
+              id="cut-model"
+              viewBox="0 0 440 380"
+              role="img"
+              aria-labelledby="cut-title cut-description"
+            >
+              <title id="cut-title">
+                Построение сечения куба плоскостью ABM
+              </title>
+              <desc id="cut-description">
+                Дан куб. M — середина ребра DD₁. Требуется построить сечение
+                плоскостью через A, B и M.
+              </desc>
+              <g id="cut-drawing"></g>
+            </svg>
+            <p class="footnote">
+              Скрытые рёбра показаны пунктиром. A₁, B₁, C₁, D₁ находятся
+              соответственно над A, B, C, D. Цветная область на последнем шаге —
+              сечение куба.
+            </p>
+          </article>
+          <article class="paper cut-notes">
+            <span class="mini-label">Дано</span>
+            <h3>M — середина DD₁.<br />Плоскость β проходит через A, B и M.</h3>
+            <p>
+              Нужно найти след секущей плоскости на задней грани. Обозначим
+              плоскость этой грани через α = (DCC₁D₁).
+            </p>
+            <div
+              class="cut-step-dots"
+              role="group"
+              aria-label="Шаги построения"
+            >
+              <button
+                type="button"
+                data-cut="0"
+                aria-current="step"
+                aria-label="Шаг 1: дано"
+              >
+                1</button
+              ><button
+                type="button"
+                data-cut="1"
+                aria-label="Шаг 2: применить признак"
+              >
+                2</button
+              ><button
+                type="button"
+                data-cut="2"
+                aria-label="Шаг 3: найти линию пересечения"
+              >
+                3</button
+              ><button
+                type="button"
+                data-cut="3"
+                aria-label="Шаг 4: завершить сечение"
+              >
+                4
+              </button>
+            </div>
+            <div
+              id="cut-step-copy"
+              class="cut-step-copy"
+              aria-live="polite"
+              aria-atomic="true"
+            ></div>
+            <div class="cut-actions">
+              <button
+                id="cut-prev"
+                type="button"
+                class="button button-light"
+                disabled
+              >
+                ← Назад</button
+              ><button
+                id="cut-next"
+                type="button"
+                class="button button-primary"
+              >
+                Дальше →
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="remember-strip">
+          <span class="remember-symbol" aria-hidden="true">!</span>
+          <div>
+            <h3>Рисунок помогает увидеть. Условия позволяют доказать.</h3>
+            <p>
+              «На рисунке похоже на параллельные» — не обоснование. В задаче
+              назови прямую-помощника или плоскость, в которой лежат обе прямые,
+              и только затем применяй признак или свойство.
+            </p>
+          </div>
+        </div>
+        <div class="lesson-next">
+          <div>
+            <span class="mini-label">Теперь твоя очередь</span>
+            <h3>От определения — к задачам.</h3>
+          </div>
+          <button
+            class="button button-primary"
+            type="button"
+            data-go="practice"
+          >
+            Перейти к практике →
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-practice"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-practice"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Без спешки и без оценок</div>
+            <h2>Попробуй. Разберись. Запомни.</h2>
+            <p>
+              Выбери ответ — и сразу прочитай объяснение. Можно вернуться к
+              любому заданию.
+            </p>
+          </div>
+          <div class="practice-stat">
+            <strong id="first-try-count">0</strong
+            ><span>верно с первого раза</span>
+          </div>
+        </div>
+        <div class="practice-layout">
+          <aside class="paper practice-sidebar" aria-label="Задания">
+            <div class="card-kicker">
+              <h3>Твой маршрут</h3>
+              <span>12 шагов</span>
+            </div>
+            <div id="question-dots" class="question-dots"></div>
+            <div class="status-key">
+              <span
+                ><i class="status-marker done" aria-hidden="true"></i
+                >Верно</span
+              ><span
+                ><i class="status-marker review" aria-hidden="true"></i>Нужно
+                повторить</span
+              >
+            </div>
+            <p class="footnote">
+              Разобранное задание учитывается в прогрессе. Ответ после подсказки
+              не считается верным с первой попытки.
+            </p>
+            <button class="text-button" type="button" data-go="learn">
+              ↖ Вернуться к теории
+            </button>
+          </aside>
+          <article
+            id="practice-card"
+            class="paper practice-card"
+            aria-labelledby="question-title"
+          >
+            <div id="practice-content"></div>
+          </article>
+        </div>
+        <div id="practice-complete" class="completion-banner" hidden>
+          <div>
+            <span class="mini-label">Весь маршрут разобран</span>
+            <h3>Хорошая работа. Осталась самопроверка.</h3>
+            <p id="practice-complete-text"></p>
+          </div>
+          <button type="button" class="button button-primary" data-go="check">
+            Проверить себя →
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-check"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-check"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Последний шаг</div>
+            <h2>Собери всё вместе.</h2>
+            <p>
+              6 вопросов без подсказок. После проверки появятся ответы и
+              объяснения. Ограничения по времени нет.
+            </p>
+          </div>
+          <span class="tag">Расположение · признак · сечения</span>
+        </div>
+        <div id="exam-result" class="exam-result" role="status" hidden></div>
+        <form id="exam-form" novalidate>
+          <div id="exam-questions" class="exam-questions"></div>
+          <p id="exam-error" class="form-error" role="alert" hidden></p>
+          <div class="exam-actions">
+            <p id="exam-filled" class="muted">Выбрано ответов: 0 из 6</p>
+            <button
+              id="exam-submit"
+              type="submit"
+              class="button button-primary"
+            >
+              Проверить ответы →</button
+            ><button
+              id="exam-restart"
+              type="button"
+              class="button button-light"
+              hidden
+            >
+              Пройти ещё раз ↻
+            </button>
+          </div>
+        </form>
+        <div class="paper pocket-card">
+          <div>
+            <span class="mini-label">Памятка</span>
+            <h3>Три случая. Один признак. Полезное свойство.</h3>
+          </div>
+          <ol>
+            <li>
+              <strong>Определение:</strong> a ∥ α означает отсутствие общих
+              точек. Если a лежит в α, она не считается параллельной этой
+              плоскости.
+            </li>
+            <li>
+              <strong>Признак:</strong> a ⊄ α, b ⊂ α и a ∥ b ⇒ a ∥ α. Условие a
+              ⊄ α обязательно.
+            </li>
+            <li>
+              <strong>Свойство:</strong> a ∥ α, a ⊂ β и α ∩ β = b ⇒ b ∥ a. В
+              доказательстве a и b лежат в одной плоскости β.
+            </li>
+            <li>
+              <strong>Сечение:</strong> найди точку следа на грани и проведи
+              через неё прямую в направлении, которое даёт свойство.
+            </li>
+          </ol>
+          <button id="print-summary" type="button" class="text-button">
+            Распечатать памятку ↗
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="container site-footer">
+      <div>
+        <span>По полочкам · геометрия, 10 класс</span>
+        <p>Прогресс сохраняется в этом браузере.</p>
+      </div>
+      <button id="reset-progress" type="button" class="text-button">
+        Сбросить прогресс урока
+      </button>
+    </footer>
+  </body>
+</html>

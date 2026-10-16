@@ -1915,3 +1915,16 @@ input[type="range"] {
 .result-theory {
   color: #fffefa;
 }
+
+.catalogue-list {
+  display: grid;
+  gap: 22px;
+}
+.lesson-card.geometry-card .lesson-card-art {
+  background: #e5e9d7;
+}
+.lesson-card.geometry-card svg {
+  display: block;
+  width: 210px;
+  max-width: 85%;
+}

@@ -54,7 +54,7 @@ class LessonTests(unittest.TestCase):
 
     def test_catalogue_and_project_paths(self):
         self.page.goto(self.base)
-        self.page.locator(".lesson-card").click()
+        self.page.locator('.lesson-card[href="./chemistry-10-alkanes/"]').click()
         expect(self.page).to_have_title("Алканы — химия, 10 класс · По полочкам")
         expect(self.page.locator("h1")).to_contain_text("Знакомься:")
         expect(self.page.locator("h1")).to_contain_text("алканы.")
@@ -164,7 +164,7 @@ class LessonTests(unittest.TestCase):
                 page.on("pageerror", lambda error: self.errors.append(str(error)))
                 page.goto(self.base)
                 self.assertLessEqual(page.evaluate("document.documentElement.scrollWidth"), width)
-                page.locator(".lesson-card").tap()
+                page.locator('.lesson-card[href="./chemistry-10-alkanes/"]').tap()
                 for tab in ["learn", "practice", "check"]:
                     page.locator(f'[data-tab="{tab}"]').tap()
                     self.assertLessEqual(page.evaluate("document.documentElement.scrollWidth"), width, f"Overflow at {width}px in {tab}")
