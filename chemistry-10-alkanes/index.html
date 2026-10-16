@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#194d43" />
+    <meta
+      name="description"
+      content="Алканы, химия 10 класса: гомологический ряд метана, формула CnH2n+2, sp3-гибридизация. Интерактивная модель метана и задания с объяснениями."
+    />
+    <title>Алканы — химия, 10 класс · По полочкам</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23194d43'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='36' font-family='sans-serif' fill='%23f5f4e8'%3EC%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <script src="./lesson.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../"
+          ><span class="brand-mark" aria-hidden="true">≡</span>По полочкам<span
+            class="brand-dot"
+            aria-hidden="true"
+            >.</span
+          ></a
+        ><a class="back-link" href="../">← Все уроки</a>
+      </div>
+    </header>
+    <main id="main" class="container lesson-main">
+      <section class="hero" aria-labelledby="lesson-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="subject-dot"></span>Химия · 10 класс · органика
+          </div>
+          <h1 id="lesson-title">Знакомься:<br /><em>алканы.</em></h1>
+          <p>
+            Как из одной формулы получить целый ряд веществ — и почему молекула
+            метана не плоская.
+          </p>
+          <div class="hero-meta">
+            <span>~ 20 минут</span
+            ><span class="small-dot" aria-hidden="true"></span
+            ><span>3 идеи, которые всё связывают</span>
+          </div>
+        </div>
+        <div class="formula-poster">
+          <div class="poster-top">
+            <span>Предельные углеводороды</span
+            ><span aria-hidden="true">01 / C</span>
+          </div>
+          <div class="big-formula" aria-label="C эн H два эн плюс два">
+            C<sub>n</sub>H<sub>2n+2</sub>
+          </div>
+          <div class="poster-rule"></div>
+          <div class="poster-bottom">
+            <span>Только одинарные связи.<br />Открытая углеродная цепь.</span
+            ><span class="poster-orbit" aria-hidden="true">✳</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="lesson-navigation">
+        <div class="tabs" role="tablist" aria-label="Этапы урока">
+          <button
+            id="tab-learn"
+            class="tab active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-learn"
+            tabindex="0"
+            data-tab="learn"
+          >
+            <span>01</span> Разобраться</button
+          ><button
+            id="tab-practice"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-practice"
+            tabindex="-1"
+            data-tab="practice"
+          >
+            <span>02</span> Практика</button
+          ><button
+            id="tab-check"
+            class="tab"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-check"
+            tabindex="-1"
+            data-tab="check"
+          >
+            <span>03</span> Проверить себя
+          </button>
+        </div>
+        <div class="overall-progress">
+          <span id="overall-label">Разобрано 0 из 12</span>
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Разобранные задания практики"
+            aria-valuemin="0"
+            aria-valuemax="12"
+            aria-valuenow="0"
+          >
+            <span id="overall-fill"></span>
+          </div>
+        </div>
+      </div>
+      <p id="storage-notice" class="storage-notice" role="status" hidden>
+        Сохранение недоступно. Урок работает, но прогресс исчезнет после
+        закрытия страницы.
+      </p>
+      <noscript
+        ><div class="callout">
+          Теорию можно прочитать без JavaScript. Для модели, переключения
+          разделов и проверки ответов включи JavaScript.
+        </div></noscript
+      >
+
+      <section
+        id="panel-learn"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-learn"
+        tabindex="0"
+      >
+        <div class="section-heading">
+          <span class="section-number">01</span>
+          <div>
+            <div class="eyebrow">Начнём с главного</div>
+            <h2>Что делает алкан алканом?</h2>
+          </div>
+        </div>
+        <div class="intro-grid">
+          <article class="paper concept-card">
+            <span class="mini-label">Состав</span>
+            <h3>Углерод + водород</h3>
+            <p>
+              Алканы состоят только из атомов <strong>C</strong> и
+              <strong>H</strong>. Углерод образует четыре связи, водород — одну.
+            </p>
+            <div class="atom-legend">
+              <span
+                ><i class="carbon-dot" aria-hidden="true"></i>C · углерод</span
+              ><span
+                ><i class="hydrogen-dot" aria-hidden="true"></i>H ·
+                водород</span
+              >
+            </div>
+          </article>
+          <article class="paper concept-card">
+            <span class="mini-label">Связи</span>
+            <h3>Все связи — одинарные</h3>
+            <p>
+              Между атомами C нет двойных и тройных связей. Все связи C–C и C–H
+              — <strong>σ-связи</strong> (сигма-связи).
+            </p>
+            <div class="bond-samples" aria-hidden="true">
+              <span class="bond-ok">C—C <small>да</small></span
+              ><span>C=C <small>нет</small></span
+              ><span>C≡C <small>нет</small></span>
+            </div>
+          </article>
+          <article class="paper concept-card">
+            <span class="mini-label">Цепь</span>
+            <h3>Без замкнутых колец</h3>
+            <p>
+              Цепь может быть прямой или разветвлённой, но
+              <strong>не образует цикла</strong>. Метан, CH<sub>4</sub>, — самый
+              простой алкан.
+            </p>
+            <p class="card-note">
+              «Предельные» означает: углерод насыщен водородом при данном
+              открытом скелете.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">02</span>
+          <div>
+            <div class="eyebrow">Одна закономерность — целый ряд</div>
+            <h2>Добавляй CH<sub>2</sub>. Получай следующий алкан.</h2>
+          </div>
+        </div>
+        <div class="series-layout">
+          <article class="paper formula-lab">
+            <div class="card-kicker">
+              <span class="mini-label">Лаборатория формулы</span
+              ><span class="live-badge">попробуй сам</span>
+            </div>
+            <h3>Сколько атомов водорода?</h3>
+            <p>
+              Если атомов углерода <em>n</em>, то атомов водорода
+              <strong>2n + 2</strong>. Для алканов <em>n</em> — целое число от
+              1.
+            </p>
+            <label class="range-label" for="carbon-range"
+              >Выбери число атомов C
+              <output id="carbon-output" for="carbon-range">1</output></label
+            ><input
+              id="carbon-range"
+              type="range"
+              min="1"
+              max="10"
+              value="1"
+              step="1"
+            />
+            <div class="range-scale" aria-hidden="true">
+              <span>1 атом C</span><span>10 атомов C</span>
+            </div>
+            <div class="formula-result" aria-live="polite" aria-atomic="true">
+              <span id="alkane-name">Метан</span
+              ><strong id="alkane-formula">CH<sub>4</sub></strong
+              ><span id="formula-calculation">H: 2 × 1 + 2 = 4</span>
+            </div>
+            <div class="homologue-step">
+              <span class="step-token">+ CH<sub>2</sub></span>
+              <p>
+                Соседние члены гомологического ряда отличаются на
+                <strong>одну группу CH<sub>2</sub></strong
+                >.
+              </p>
+            </div>
+            <div class="callout subtle">
+              <strong>Почему +2?</strong> В открытой цепи из <em>n</em> атомов C
+              есть <em>n − 1</em> связей C–C. На связи с H остаётся 4n − 2(n −
+              1) = 2n + 2 валентностей.
+            </div>
+          </article>
+          <article class="paper series-card">
+            <div class="card-kicker">
+              <h3>Первые десять</h3>
+              <span class="mini-label">Нажми на строку</span>
+            </div>
+            <p class="card-note">
+              Названия неразветвлённых алканов. После бутана удобно запоминать
+              числовые корни: пент-, гекс-, гепт-, окт-, нон-, дек-.
+            </p>
+            <div
+              id="homologue-list"
+              class="homologue-list"
+              role="group"
+              aria-label="Выбор алкана"
+            >
+              <p>
+                Метан CH<sub>4</sub> → этан C<sub>2</sub>H<sub>6</sub> → пропан
+                C<sub>3</sub>H<sub>8</sub> → бутан C<sub>4</sub>H<sub>10</sub> →
+                пентан C<sub>5</sub>H<sub>12</sub> → гексан C<sub>6</sub>H<sub
+                  >14</sub
+                >
+                → гептан C<sub>7</sub>H<sub>16</sub> → октан C<sub>8</sub>H<sub
+                  >18</sub
+                >
+                → нонан C<sub>9</sub>H<sub>20</sub> → декан
+                C<sub>10</sub>H<sub>22</sub>.
+              </p>
+            </div>
+            <p class="footnote">
+              Начиная с C<sub>4</sub>H<sub>10</sub>, одному составу могут
+              соответствовать разные углеродные скелеты — изомеры. Общая формула
+              сама по себе не задаёт строение.
+            </p>
+          </article>
+        </div>
+
+        <div class="section-heading spaced">
+          <span class="section-number">03</span>
+          <div>
+            <div class="eyebrow">Из тетради — в пространство</div>
+            <h2>Метан — не плоский крестик.</h2>
+          </div>
+        </div>
+        <div class="structure-layout">
+          <article class="molecule-card">
+            <div class="card-kicker">
+              <span class="mini-label">Модель CH<sub>4</sub></span
+              ><span class="model-tag">3D → 2D</span>
+            </div>
+            <svg
+              id="methane-model"
+              viewBox="0 0 440 340"
+              role="img"
+              aria-labelledby="model-title model-description"
+            >
+              <title id="model-title">Пространственная модель метана</title>
+              <desc id="model-description">
+                Углерод в центре тетраэдра, четыре атома водорода в его
+                вершинах. Угол H–C–H около 109,5 градуса.
+              </desc>
+              <g id="molecule-drawing"></g></svg
+            ><label class="range-label" for="rotation-range"
+              >Поверни молекулу
+              <output id="rotation-output" for="rotation-range"
+                >30°</output
+              ></label
+            ><input
+              id="rotation-range"
+              type="range"
+              min="0"
+              max="360"
+              step="5"
+              value="30"
+            />
+            <div class="model-controls">
+              <button
+                id="rotate-model"
+                type="button"
+                class="button button-light"
+              >
+                Повернуть на 30° ↻</button
+              ><label class="checkbox-label"
+                ><input id="show-tetrahedron" type="checkbox" checked />Рёбра
+                тетраэдра</label
+              >
+            </div>
+            <p class="footnote">
+              Условная шаростержневая модель. Размеры атомов и связей не в
+              масштабе; линии между H показывают рёбра тетраэдра, а не
+              химические связи.
+            </p>
+          </article>
+          <article class="paper structure-copy">
+            <span class="mini-label">Почему именно такая форма?</span>
+            <h3>Четыре направления.<br />Один тетраэдр.</h3>
+            <ol class="explanation-steps">
+              <li>
+                <span>1</span>
+                <div>
+                  <h4>sp<sup>3</sup>-гибридизация</h4>
+                  <p>
+                    В модели гибридизации одна 2s- и три 2p-орбитали углерода
+                    образуют четыре равноценные sp<sup>3</sup>-орбитали.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>2</span>
+                <div>
+                  <h4>Орбитали направлены к вершинам</h4>
+                  <p>
+                    Их оси расходятся к четырём вершинам тетраэдра. В центре —
+                    C, в метане у вершин находятся четыре H.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span>3</span>
+                <div>
+                  <h4>Угол H–C–H ≈ 109,5°</h4>
+                  <p>
+                    Это угол в молекуле метана. В других алканах окружение
+                    каждого атома C близко к тетраэдрическому, а углы могут
+                    немного отличаться.
+                  </p>
+                </div>
+              </li>
+            </ol>
+            <div class="sigma-note">
+              <strong>Откуда берутся σ-связи?</strong>
+              <p>
+                C–H: перекрывание sp<sup>3</sup>-орбитали C и 1s-орбитали H.<br />C–C:
+                перекрывание sp<sup>3</sup>-орбиталей двух атомов C.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="remember-strip">
+          <span class="remember-symbol" aria-hidden="true">!</span>
+          <div>
+            <h3>Запись на бумаге ≠ форма в пространстве</h3>
+            <p>
+              Прямая структурная формула — удобная запись порядка связей. В
+              пространстве углеродная цепь может изгибаться: вокруг одинарных
+              C–C-связей возможно вращение.
+            </p>
+          </div>
+        </div>
+        <div class="lesson-next">
+          <div>
+            <span class="mini-label">Теперь твоя очередь</span>
+            <h3>Закрепим три главные идеи?</h3>
+          </div>
+          <button
+            class="button button-primary"
+            type="button"
+            data-go="practice"
+          >
+            Перейти к практике <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-practice"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-practice"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Без спешки и без оценок</div>
+            <h2>Попробуй. Разберись. Запомни.</h2>
+            <p>
+              Выбери ответ — и сразу прочитай объяснение. Можно вернуться к
+              любому заданию.
+            </p>
+          </div>
+          <div class="practice-stat">
+            <strong id="first-try-count">0</strong
+            ><span>верно с первого раза</span>
+          </div>
+        </div>
+        <div class="practice-layout">
+          <aside class="paper practice-sidebar" aria-label="Задания">
+            <div class="card-kicker">
+              <h3>Твой маршрут</h3>
+              <span>12 шагов</span>
+            </div>
+            <div id="question-dots" class="question-dots"></div>
+            <div class="status-key">
+              <span
+                ><i class="status-marker done" aria-hidden="true"></i
+                >Верно</span
+              ><span
+                ><i class="status-marker review" aria-hidden="true"></i>Нужно
+                повторить</span
+              >
+            </div>
+            <p class="footnote">
+              Разобранное задание учитывается в прогрессе. Ответ после подсказки
+              не считается верным с первой попытки.
+            </p>
+            <button class="text-button" type="button" data-go="learn">
+              ↖ Вернуться к теории
+            </button>
+          </aside>
+          <article
+            id="practice-card"
+            class="paper practice-card"
+            aria-labelledby="question-title"
+          >
+            <div id="practice-content"></div>
+          </article>
+        </div>
+        <div id="practice-complete" class="completion-banner" hidden>
+          <div>
+            <span class="mini-label">Весь маршрут разобран</span>
+            <h3>Хорошая работа. Осталась самопроверка.</h3>
+            <p id="practice-complete-text"></p>
+          </div>
+          <button type="button" class="button button-primary" data-go="check">
+            Проверить себя →
+          </button>
+        </div>
+      </section>
+
+      <section
+        id="panel-check"
+        class="tab-panel"
+        role="tabpanel"
+        aria-labelledby="tab-check"
+        tabindex="0"
+        hidden
+      >
+        <div class="panel-intro">
+          <div>
+            <div class="eyebrow">Последний шаг</div>
+            <h2>Собери всё вместе.</h2>
+            <p>
+              6 вопросов без подсказок. После проверки появятся ответы и
+              объяснения. Ограничения по времени нет.
+            </p>
+          </div>
+          <span class="tag">Состав · гомологи · строение</span>
+        </div>
+        <div id="exam-result" class="exam-result" role="status" hidden></div>
+        <form id="exam-form" novalidate>
+          <div id="exam-questions" class="exam-questions"></div>
+          <p id="exam-error" class="form-error" role="alert" hidden></p>
+          <div class="exam-actions">
+            <p id="exam-filled" class="muted">Выбрано ответов: 0 из 6</p>
+            <button
+              id="exam-submit"
+              type="submit"
+              class="button button-primary"
+            >
+              Проверить ответы →</button
+            ><button
+              id="exam-restart"
+              type="button"
+              class="button button-light"
+              hidden
+            >
+              Пройти ещё раз ↻
+            </button>
+          </div>
+        </form>
+        <div class="paper pocket-card">
+          <div>
+            <span class="mini-label">Памятка в одну строку</span>
+            <h3>Алканы = открытая цепь + одинарные связи.</h3>
+          </div>
+          <div class="memory-pills">
+            <span>C<sub>n</sub>H<sub>2n+2</sub></span
+            ><span>Соседи: +CH<sub>2</sub></span
+            ><span>sp<sup>3</sup></span
+            ><span>CH<sub>4</sub>: 109,5°</span>
+          </div>
+          <button id="print-summary" type="button" class="text-button">
+            Распечатать памятку ↗
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="container site-footer">
+      <div>
+        <span>По полочкам · химия, 10 класс</span>
+        <p>Прогресс сохраняется в этом браузере.</p>
+      </div>
+      <button id="reset-progress" type="button" class="text-button">
+        Сбросить прогресс урока
+      </button>
+    </footer>
+  </body>
+</html>
